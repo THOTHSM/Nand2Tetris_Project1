@@ -1,0 +1,95 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/1/Or16.hdl
+/**
+ * 16-bit Or gate:
+ * for i = 0, ..., 15:
+ * out[i] = a[i] Or b[i] 
+ */
+CHIP Or16 {
+    IN a[16], b[16];
+    OUT out[16];
+
+    PARTS:
+    //// Replace this comment with your code.
+    // For bit 0
+    Nand(a=a[0], b=a[0], out=a01);
+    Nand(a=b[0], b=b[0], out=b01);
+    Nand(a=a01, b=b01, out=out[0]);
+
+    // For bit 1
+    Nand(a=a[1], b=a[1], out=a11);
+    Nand(a=b[1], b=b[1], out=b11);
+    Nand(a=a11, b=b11, out=out[1]);
+
+    // For bit 2
+    Nand(a=a[2], b=a[2], out=a21);
+    Nand(a=b[2], b=b[2], out=b21);
+    Nand(a=a21, b=b21, out=out[2]);
+
+    // For bit 3
+    Nand(a=a[3], b=a[3], out=a31);
+    Nand(a=b[3], b=b[3], out=b31);
+    Nand(a=a31, b=b31, out=out[3]);
+
+    // For bit 4
+    Nand(a=a[4], b=a[4], out=a41);
+    Nand(a=b[4], b=b[4], out=b41);
+    Nand(a=a41, b=b41, out=out[4]);
+
+    // For bit 5
+    Nand(a=a[5], b=a[5], out=a51);
+    Nand(a=b[5], b=b[5], out=b51);
+    Nand(a=a51, b=b51, out=out[5]);
+
+    // For bit 6
+    Nand(a=a[6], b=a[6], out=a61);
+    Nand(a=b[6], b=b[6], out=b61);
+    Nand(a=a61, b=b61, out=out[6]);
+
+    // For bit 7
+    Nand(a=a[7], b=a[7], out=a71);
+    Nand(a=b[7], b=b[7], out=b71);
+    Nand(a=a71, b=b71, out=out[7]);
+
+    // For bit 8
+    Nand(a=a[8], b=a[8], out=a81);
+    Nand(a=b[8], b=b[8], out=b81);
+    Nand(a=a81, b=b81, out=out[8]);
+
+    // For bit 9
+    Nand(a=a[9], b=a[9], out=a91);
+    Nand(a=b[9], b=b[9], out=b91);
+    Nand(a=a91, b=b91, out=out[9]);
+
+    // For bit 10
+    Nand(a=a[10], b=a[10], out=a101);
+    Nand(a=b[10], b=b[10], out=b101);
+    Nand(a=a101, b=b101, out=out[10]);
+
+    // For bit 11
+    Nand(a=a[11], b=a[11], out=a111);
+    Nand(a=b[11], b=b[11], out=b111);
+    Nand(a=a111, b=b111, out=out[11]);
+
+    // For bit 12
+    Nand(a=a[12], b=a[12], out=a121);
+    Nand(a=b[12], b=b[12], out=b121);
+    Nand(a=a121, b=b121, out=out[12]);
+
+    // For bit 13
+    Nand(a=a[13], b=a[13], out=a131);
+    Nand(a=b[13], b=b[13], out=b131);
+    Nand(a=a131, b=b131, out=out[13]);
+
+    // For bit 14
+    Nand(a=a[14], b=a[14], out=a141);
+    Nand(a=b[14], b=b[14], out=b141);
+    Nand(a=a141, b=b141, out=out[14]);
+
+    // For bit 15
+    Nand(a=a[15], b=a[15], out=a151);
+    Nand(a=b[15], b=b[15], out=b151);
+    Nand(a=a151, b=b151, out=out[15]);
+}
